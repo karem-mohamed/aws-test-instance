@@ -1,8 +1,8 @@
 const userRouter = (router, myEmitter) => {
   router.get("/", (req, res) => {
-    console.log(process.env.ENV, "wwwwwwwwww");
-    myEmitter.emit("fire", process.env.ENV);
-    return res.json({ mess: "GOOD" });
+    console.log(process.env.NODE_ENV, "wwwwwwwwww");
+    myEmitter.emit("fire", process.env.NODE_ENV);
+    return res.json({ mess: "ci/cd working" });
   });
 
   return router;
